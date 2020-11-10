@@ -1,0 +1,27 @@
+הקוד הזה עובד עם שתי הפונקציות הבסיסיות, כלומר הגדרה של 
+toggle
+ 
+כרגע מה שנמצא שתקין זה 
+RX/TX = Toggle OFF
+
+דוגמא לקוד בשביל להפעיל תשדורת
+
+Main_setup_nRF();
+	
+	SetToggleONorOFF(OFF);
+	SetControllerRXorTX(TX);
+
+	
+	while(1)
+	{
+		processRXorTX();
+		USART_send(Receive_From_nRF[5]);
+	}
+
+זה אמור לעשות את העבודה
+הוא יראה ערך משתנה של מספרים בסדר עולה
+
+
+
+הבעיה בקוד הזה שהוא כתוב לא יפה!
+ישופר בהמשך!
